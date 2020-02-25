@@ -1,0 +1,241 @@
+body{
+   /*  font-family: 'Lato', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background: rgb(75, 75, 75);
+}
+.hero{
+    margin:0 200px;
+}
+iframe{
+    width:100%; 
+    height:450px; 
+}
+.hero-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 330px 620px 418px;
+    grid-template-areas: "aside video-section video-section"
+                         "aside video-section video-section"
+                         "aside comentarios sugerencias";
+}
+
+.aside{
+    grid-area: aside;
+    background:rgb(23, 23, 67);
+    color:white;
+    padding-left:25px;
+}
+.aside h1{
+    font-family: 'Raleway',Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-top: 38px;
+
+}
+.aside .title span{
+    background: linear-gradient(to right, red, rgb(157, 0, 255));
+}
+
+.playlist{
+   margin-top: 45px;
+   margin-bottom: 45px;
+}
+.video-section{
+    grid-area: video-section;
+    background:rgb(255, 255, 255);
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+.comentarios{
+    grid-area:comentarios;
+    background: white;
+    padding: 10px 0px 0px 30px;
+    position: relative;
+}
+.comentarios .item-coment{
+    display: flex;
+    margin: 25px 3px;
+    align-items: center;
+}
+.comentarios .item-coment .texto{
+    text-align: left;
+}
+.comentarios .item-coment p{
+    font-size: 18.3px;
+    margin: 0px 13px;
+    padding: 0;
+}
+.comentarios .item-coment img{
+    border-radius: 35px;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+}
+.comentarios .item-coment:first-of-type img {
+    margin:8px;
+    width: 30px;
+    height: 30px;
+    opacity: 50%;
+}
+.comentarios .item-coment:first-of-type {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.comentarios input{
+    position: absolute;
+    font-size: 18px;
+    padding: 10px 10px 10px 45px;
+    width: 500px;
+    border-radius: 8px;
+    background: rgba(0, 0, 5, 0.1);
+    border: 2px solid rgba(150, 150, 150, 0.2);
+}
+
+.sugerencias{
+    grid-area: sugerencias;
+    background:white;
+    padding-top: 10px;
+}
+.sugerencias .title{
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.sugerencias .container-img img{
+    width: 248px;
+    height: 170px;
+}
+.sugerencias p{
+    font-size: 14px;
+    margin: 4px 0px 28px 0px;
+    width: 248px;
+}
+.amigo{
+    display: flex;
+    margin: 4px;
+    align-items: center;
+}
+.playamigos h3{
+    font-size: 18px;
+}
+.playamigos p{
+    font-size: 16px;
+    margin-left: 16px;
+}
+.playamigos img{
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+}
+.comentarios img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+.sugerencias img{
+    width: 150px;
+    height: 150px;
+}
+.item{
+    display: flex;
+    align-items: start;
+    margin: 18px 30px 0 0;
+}
+.item p{
+    margin:0px;
+    justify-content: left;
+}
+.item .num{
+    margin-right: 25px;
+}
+.item:last-child .num{
+    margin-right: 15px;
+}
+.menu-video{
+    padding-top: 15px;
+    padding-left:15px;
+}
+
+.menu-video h3{
+    margin-bottom:0;
+}
+.menu-video p{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top:0;
+}
+.menu{
+    display: flex;
+    align-items: center;
+
+}
+.menu button{
+    background: linear-gradient(to right, red, pink);
+    font-size: 16px;
+    border-radius: 10px;
+    color:white;
+    padding: 8px 12px;
+    margin-right: 16px;
+}
+.menu .labels{
+    display: inherit;
+    padding-left: 70px;
+}
+
+.menu label{
+    color: white;
+    font-size: 13px;
+    border-radius: 20px;
+    margin: 0 5px;
+    width: 80px;
+    text-align: center;
+}
+.menu label:nth-of-type(1){
+    background-color: blue;
+    border: 4px solid blue; 
+}
+.menu label:nth-of-type(2){
+    background-color: lightseagreen;
+    border: 4px solid lightseagreen; 
+}
+.menu label:nth-of-type(3){
+    background-color: red;
+    border: 4px solid red; 
+}
+.menu label:nth-of-type(4){
+    background-color: pink;
+    border: 4px solid pink; 
+}
+.iconos{
+    text-align: center;
+}
+.iconos p,
+.iconos i{
+    font-size: 14px;
+    margin: 2px 20px;
+}
+
+@media screen and (max-width:1224px){
+    .hero-container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 330px 460px 308px;
+        grid-template-areas: "aside video-section video-section"
+        "aside video-section video-section"
+        "aside comentarios sugerencias";
+    }
+
+}
+
+@media screen and (max-width:980px){
+    .hero-container{
+        min-width: 780px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 330px 388px 262px;
+        grid-template-areas: "video-section video-section video-section"
+        "aside comentarios comentarios"
+        "aside sugerencias sugerencias";
+    }
+}

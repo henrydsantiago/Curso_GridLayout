@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid implicito</title>
+    <style>
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: violet;
+        }
+        .container{
+            display: grid;
+            background-color: rgb(172, 179, 165);
+            gap: 5px;
+            height: 100vh;
+            grid-template: [inicio] repeat(2, 1fr) [header] 1fr [penultima] 1fr [final] / 
+            [inicio] repeat(3, 1fr) [contenido1-end] repeat(2, 1fr) [contenido2-end] 1fr [penultima] 1fr [ultima];
+            margin: 0 200px;
+          /*   grid-auto-flow: column;
+            grid-auto-columns: 30px 100px; */
+            grid-auto-flow: row;
+            grid-auto-rows: 30px 100px;
+        }
+        .item{
+            background-color: hotpink;
+            border: 2px yellowgreen solid;
+        }
+
+        .item:nth-of-type(1){
+            grid-column: inicio / final;
+            grid-row: inicio / header;
+            background-color: rgb(114, 240, 114);
+        }
+        .item:nth-of-type(2){
+            grid-column: inicio / contenido1-end;
+            grid-row: header / final;
+            background-color: rgb(85, 127, 233);
+        }
+        .item:nth-of-type(3){
+            grid-column: contenido1-end / contenido2-end;
+            grid-row: header / final;
+            background-color: rgb(185, 197, 16);
+        }
+        .item:nth-of-type(4){
+            grid-column: contenido2-end / final;
+            grid-row: header / penultima;
+            background-color: rgb(249, 55, 41);
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+        <div class="item">item #6</div>
+    </section>
+</body>
+</html>
+

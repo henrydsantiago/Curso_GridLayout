@@ -1,0 +1,217 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px;
+    padding: 0px;
+    border: 0px;
+    background: rgb(15, 15, 15);   
+}
+
+.aside img, 
+.comentarios img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.hero{
+    background-color: white;
+    display: grid;
+    padding: 0px;
+    margin:0px 30px;
+    grid-template:  [rini] 100px 350px [medio] 150px 1fr[rfin]  / [cinicio] 330px minmax(450px, 1.2fr) minmax(304px, 0.8fr) [cfin];
+    grid-template-areas: "titulo video video"
+                         "aside video video" 
+                         "aside menuvideo menuvideo" 
+                         "aside comentarios sugerencias";
+
+}
+iframe{
+    margin:0;
+    padding: 0;
+    width:100%; 
+    height:450px;
+}
+
+/*                                              TITULO       */
+.titulo{
+    grid-area: titulo;
+    background:rgb(23, 23, 67);
+    color: white;
+}
+    .titulo h1{
+        font-family: 'Raleway',Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        margin: 40px 15px 0px 15px;
+    }
+    .titulo span{
+        background: linear-gradient(to right, red, rgb(157, 0, 255));
+    }
+
+/*                                              ASIDE       */
+.aside{
+    grid-area: aside;
+    background:rgb(23, 23, 67);
+    font-size: 18px;
+    color: white;
+}
+    .aside h3{
+        margin:20px 0px 10px 15px;
+        margin-left: 15px;
+    }
+    .aside p{
+        margin:5px 0px;
+        margin-left: 15px;
+    }
+    .aside .playlist{
+        padding-right: 25px;
+    }
+        .aside .playlist .item{
+            display: flex;
+        }
+            .aside .playlist .item:last-child .nameitem{
+                margin-left: 6px;
+                padding-left: 0;
+            }
+    .aside .playamigos .amigo{
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        margin: 20px 0px;
+    }
+
+/*                                              VIDEO       */
+.video{
+    grid-area: video;
+    background-color: black;
+    position: relative;
+}
+
+/*                                              MENU-VIDEO       */
+.menuvideo{
+    display:grid;
+    grid-area: menuvideo; 
+    grid-template: 50% 50% / 100%;
+    grid-template-areas: "menuNombre"
+                         "menuBajo";
+}
+    .menuvideo .nombre{
+        grid-area: menuNombre;
+        padding-left: 15px;
+        align-self: center;
+        border-bottom: 1px gray solid;
+    }
+        .menuvideo .nombre h3, 
+        .menuvideo .nombre p {
+            margin: 10px 0;
+            display: block;
+        }
+    .menuvideo .menu{
+        display: grid;
+        grid-area: menuBajo;
+        grid-template: 100% / 50% 50%;
+        grid-template-areas: "menuBotones menuLabels";
+    }
+        .menuvideo .botones{
+            grid-area: menuBotones;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding-left: 15px;
+        }
+            .menuvideo .botones .boton button, 
+            .menuvideo .botones .iconos{
+                text-align:  center;
+                margin-right: 2em;
+            }
+            .menuvideo .botones .boton button{
+                background: linear-gradient(to right, red, pink);
+                font-size: 16px;
+                border-radius: 10px;
+                color:white;
+                padding: 8px 12px;
+                margin-right: 16px;
+            }
+            .menuvideo .botones .iconos p,
+            .menuvideo .botones .iconos i{
+                margin:0;
+            }
+
+        .menuvideo .labels{
+            grid-area: menuLabels;
+            align-self: center;
+            padding-left: 15px;
+        }
+            .menuvideo .labels label{
+                width: 80px;
+                display: inline-block;
+                border-radius: 20px;
+                padding: 2px;
+                text-align: center;
+                font-size: 14px;
+                color:white;
+                margin: 2px 4px;
+            }
+            .menuvideo .labels label:nth-of-type(1){
+                background-color: magenta;
+            }
+            .menuvideo .labels label:nth-of-type(2){
+                background-color: red;
+            }
+            .menuvideo .labels label:nth-of-type(3){
+                background-color: blue;
+            }
+            .menuvideo .labels label:nth-of-type(4){
+                background-color: lightgreen;
+            }
+
+/*                                              COMENTARIOS       */
+.comentarios{
+    grid-area: comentarios;
+    font-size: 18px;
+    
+}
+    .comentarios .coment-title{
+        margin-left: 25px;
+    }
+    .comentarios .item-coment{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 20px 0;
+
+    }
+        .comentarios .item-coment input{
+            position: absolute;
+            font-size: 18px;
+            margin: 5px 20px 20px 25px;
+            padding: 10px 10px 10px 50px;
+            border-radius: 8px;
+            background: rgba(0, 0, 5, 0.1);
+            border: 2px solid rgba(150, 150, 150, 0.2);
+            width: 20em;
+        }
+        .comentarios .item-coment p{
+            margin:5px 0px 0px 10px;
+        }
+        .comentarios .item-coment img{
+            margin-left:25px;
+        }
+        .comentarios .item-coment:first-of-type img{
+            width: 34px;
+            height: 34px;
+            margin:10px 0px 0px 35px;
+            opacity: 0.6;
+        }
+
+/*                                              SUGERENCIAS     */
+.sugerencias{
+    grid-area: sugerencias;
+    padding: 15px;
+}
+    .sugerencias .container-img img{
+        width: 248px;
+        height: 170px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.2), -2px -2px  10px rgba(0, 0, 0, 0.2);
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        /* inset (por dentro) */
+    }
