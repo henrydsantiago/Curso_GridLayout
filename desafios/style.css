@@ -216,6 +216,16 @@ iframe{
     margin: 2px 20px;
 }
 
+/*          PROBLEMAS RESPONSIVE  
+            Input muy grande
+
+            PROBLEMAS MAQUETACIÓN
+            Funciona bien, pero es más difícil hacer el responsive porque 
+            sólo usé un Grid principal, es mejor usar más Grids, por eso
+            haré el desafío de nuevo, usando Grid y "subGrids"
+
+*/
+
 @media screen and (max-width:1224px){
     .hero{
         margin:0px;
