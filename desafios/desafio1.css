@@ -181,6 +181,7 @@ aside{
     .contenido{
         grid-template-columns: [primera] minmax(255px, 1fr) [ultima];
         gap: 20px 0px;
+        justify-items: center;
     }
 
 }
