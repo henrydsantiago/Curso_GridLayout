@@ -217,6 +217,9 @@ iframe{
 }
 
 @media screen and (max-width:1224px){
+    .hero{
+        margin:0px;
+    }
     .hero-container{
         display: grid;
         justify-content: center;
@@ -229,6 +232,10 @@ iframe{
 }
 
 @media screen and (max-width:980px){
+    .hero{
+        min-width: 961px;
+        margin:0px;
+    }
     .hero-container{
         min-width: 780px;
         display: grid;

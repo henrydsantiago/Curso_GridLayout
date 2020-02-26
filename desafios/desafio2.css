@@ -3,7 +3,7 @@ body{
     margin:0px;
     padding: 0px;
     border: 0px;
-    background: rgb(15, 15, 15);   
+    background: rgb(15, 15, 15);  
 }
 
 .aside img, 
@@ -18,7 +18,7 @@ body{
     display: grid;
     padding: 0px;
     margin:0px 30px;
-    grid-template:  [rini] 100px 350px [medio] 150px 1fr[rfin]  / [cinicio] 330px minmax(450px, 1.2fr) minmax(304px, 0.8fr) [cfin];
+    grid-template:  [rini] 100px 350px [medio] 150px 1fr [rfin]  / [cinicio] 330px minmax(450px, 1.2fr) minmax(304px, 0.8fr) [cfin];
     grid-template-areas: "titulo video video"
                          "aside video video" 
                          "aside menuvideo menuvideo" 
@@ -88,6 +88,7 @@ iframe{
 
 /*                                              MENU-VIDEO       */
 .menuvideo{
+    background-color: white;
     display:grid;
     grid-area: menuvideo; 
     grid-template: 50% 50% / 100%;
@@ -166,9 +167,9 @@ iframe{
 
 /*                                              COMENTARIOS       */
 .comentarios{
+    background-color: white;
     grid-area: comentarios;
     font-size: 18px;
-    
 }
     .comentarios .coment-title{
         margin-left: 25px;
@@ -205,6 +206,7 @@ iframe{
 
 /*                                              SUGERENCIAS     */
 .sugerencias{
+    background-color: white;
     grid-area: sugerencias;
     padding: 15px;
 }
@@ -215,3 +217,94 @@ iframe{
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         /* inset (por dentro) */
     }
+
+
+@media screen and (max-width:1338px){
+    .hero{
+        margin:0;
+    }
+}
+@media screen and (max-width: 1078px){
+    body{
+        background-color: white;
+    }
+    .hero{
+        grid-template:  [rini] 100px 450px [medio] 150px 1fr 1fr[rfin]  / [cinicio] 330px minmax(540px, 1fr);
+        grid-template-areas: "titulo titulo "
+                             "video video " 
+                             "aside menuvideo " 
+                             "aside comentarios "
+                             "aside sugerencias";
+    }
+    .titulo h1{
+        display: block;
+        text-align: center;
+    }
+    .menuvideo .menu{
+        display: grid;
+        grid-area: menuBajo;
+        grid-template: 50% 50% / 100%;
+        grid-template-areas: "menuBotones"
+                             "menuLabels";
+    }
+    .sugerencias{
+        display: grid;
+        grid-template: 50px 180px 20px / repeat(2, 1fr);
+        grid-template-areas: "titleSug titleSug"
+                            "peli1 peli2"
+                            "slogan slogan";
+    }
+    .sugerencias .title{
+        grid-area: titleSug;
+    }
+    .sugerencias .container-img:nth-of-type(1){
+        grid-area: peli1;
+    }
+    .sugerencias .container-img:nth-of-type(2){
+        grid-area: peli2;
+    }
+
+}
+@media screen and (max-width: 805px){
+    .hero{
+        grid-template:  [rini] 100px 450px 150px 480px 480px 325px[rfin]  / 
+                        [cinicio]minmax(535px, 1fr) [cfin];
+        grid-template-areas: "titulo"
+                                "video " 
+                                "menuvideo " 
+                                "comentarios "
+                                "aside "
+                                "sugerencias ";
+    }
+    .menuvideo .menu{
+        display: grid;
+        grid-area: menuBajo;
+        grid-template: 50% 50% / 100%;
+        grid-template-areas: "menuBotones"
+                                "menuLabels";
+    }
+    .aside{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .aside .playlist{
+        overflow:auto;
+    }
+    .sugerencias{
+        display: grid;
+        grid-template: 50px 180px 20px / repeat(2, 1fr);
+        grid-template-areas: "titleSug titleSug"
+                            "peli1 peli2"
+                            "slogan slogan";
+    }
+    .sugerencias .title{
+        grid-area: titleSug;
+    }
+    .sugerencias .container-img:nth-of-type(1){
+        grid-area: peli1;
+    }
+    .sugerencias .container-img:nth-of-type(2){
+        grid-area: peli2;
+    }
+}
+
